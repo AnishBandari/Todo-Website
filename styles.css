@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: "Ultra", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3em;
+    text-align: center;
+    color: #fff;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 20px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+    color: #333;
+}
+
+form,
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+form textarea {
+    resize: none;
+    width: 100%;
+    min-height: 80px;
+    padding: 14px;
+    border: 2px solid #185a9d;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+
+}
+
+form textarea:focus {
+    border-color: #43cea2;
+    outline: none;
+}
+
+form button {
+    padding: 12px 20px;
+    background-color: #185a9d;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1em;
+}
+
+form button:hover {
+    background-color: #43cea2;
+    transform: translateY(-2px);
+}
+
+.todoContainer,
+.todo {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.todo {
+    padding: 14px;
+    border: 1px solid #185a9d;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.todo:hover {
+    transform: translateY(-2px);
+}
+
+.todo p {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+
+.btnContainer {
+    display: flex;
+    gap: 6px;
+    margin-left: auto;
+}
+
+.iconBtn {
+    background: #185a9d;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    display: grid;
+    place-items: center;
+    border-radius: 8px;
+    height: 45px;
+    width: 45px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    color: #fff;
+    font-size: 1em;
+}
+
+.iconBtn:hover {
+    background: #43cea2;
+    transform: translateY(-2px);
+}
+
+.completeBtn {
+    background: #185a9d;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    display: grid;
+    place-items: center;
+    border-radius: 8px;
+    height: 45px;
+    width: 45px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    color: #fff;
+    font-size: 1em;
+}
+
+canvas#confetti {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    font-size: 17px;
+}
+
+.toast.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    align-items: center;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}

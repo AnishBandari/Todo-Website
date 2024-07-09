@@ -14,6 +14,7 @@ Technologies Used
   - JavaScript
   - JSConfetti for confetti animations
   - Google Fonts for typography
+  - Canva for favicon
     
 How to Use
 1. Clone the repository:
@@ -29,8 +30,6 @@ How to Use
 
 Credits
   Fonts:
-    - JetBrains Mono
-    - Montserrat
     - Ultra
     - Poppins
   Icons: Font Awesome 6
